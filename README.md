@@ -6,7 +6,7 @@ Used Tech Stack
 2. Sqlite
 
 
-#installation steps 
+# installation steps 
 
 pip install -r requirements.txt
 
