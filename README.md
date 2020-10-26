@@ -6,11 +6,11 @@ Used Tech Stack
 2. Sqlite
 
 
-# installation steps 
+# Installation steps 
 
 pip install -r requirements.txt
 
-# running steps 
+# Running steps 
 
 1. python manage.py makemigrations
 2. python manage.py migrate
@@ -42,13 +42,13 @@ update commodities
 3. Patch -baseurl/commodities
        body ={"name": "commodity_name", "inventory": inventery_value,"price": price,}
 
-#Composition API CRUD operation
+# Composition API CRUD operation
 
 Add element to commodity with commodity 
 1. POST - baseurl/compositions
           body ={ "element_id":element_id,"percentage":percentage,"commodity_id":commodity_id}
  
-#Note: 
+# Note: 
 1. element_id and commodity_id cannot be empty and should be present in Element and commodity Table
 2. percentage cannot be more than 100%
 
