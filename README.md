@@ -1,17 +1,15 @@
-# Commodity_Api
+# Project 
+Commodity_Api
 
-Used Tech Stack
-
+# Tech Stack
 1. Django
 2. Sqlite
 
 
-# Installation steps 
-
+# Dependencies injection
 pip install -r requirements.txt
 
-# Running steps 
-
+# Execution steps 
 1. python manage.py makemigrations
 2. python manage.py migrate
 3. python manage.py createsuperuser
@@ -23,36 +21,40 @@ pip install -r requirements.txt
 baseurl = http://127.0.0.1:8000
 basic_auth = username and password 
 
-# Elements API CRUD operation 
+#################################################################################
+# Elements API  
+GET
+baseurl/elements/<element_id>
 
-GET - baseurl/elements/Element_Id
-Post - baseurl/elements
-       body = {"name":"element_name"}
+POST
+baseurl/elements
+payload = {"name":"element_name"}
 
-# Commodity API CRUD operation 
+###########################################################################
+# Commodity API
+GET
+baseurl/commodities/{commodity_id}
 
-    get commodity details
-1. GET- baseurl/commodities/{commodity_id}
-
-    create commodity
-2. POST - baseurl/commodities
-       body ={"name": "commodity_name", "inventory": inventery_value,"price": price,}
+POST
+baseurl/commodities
+payload = {"name": "commodity_name", "inventory": inventery_value,"price": price,}
        
-    update commodities
-3. Patch -baseurl/commodities
-       body ={"name": "commodity_name", "inventory": inventery_value,"price": price,}
 
-# Composition API CRUD operation
+PATCH 
+baseurl/commodities
+payload = {"name": "commodity_name", "inventory": inventery_value,"price": price,}
 
-Add element to commodity with commodity 
-1. POST - baseurl/compositions
-          body ={ "element_id":element_id,"percentage":percentage,"commodity_id":commodity_id}
+###########################################################################
+# Composition API 
+POST
+baseurl/compositions
+payload = { "element_id":element_id,"percentage":percentage,"commodity_id":commodity_id}
  
 # Note: 
-1. element_id and commodity_id cannot be empty and should be present in Element and commodity Table
+1. element_id and commodity_id cannot be empty and should be exist in Element and Commodity Table
 2. percentage cannot be more than 100%
 
-# EXAMPLE for commodity APi as per the Requirements 
+# RESPONSE for commodity APi as per the Requirements 
 {
     "name": "update_salt",
     "inventory": 10000,
