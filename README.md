@@ -31,14 +31,14 @@ Post - baseurl/elements
 
 # Commodity API CRUD operation 
 
-get commodity details
+   get commodity details
 1. GET- baseurl/commodities/{commodity_id}
 
-create commodity
+    create commodity
 2. POST - baseurl/commodities
        body ={"name": "commodity_name", "inventory": inventery_value,"price": price,}
        
-update commodities
+    update commodities
 3. Patch -baseurl/commodities
        body ={"name": "commodity_name", "inventory": inventery_value,"price": price,}
 
