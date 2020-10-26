@@ -31,7 +31,7 @@ Post - baseurl/elements
 
 # Commodity API CRUD operation 
 
-   get commodity details
+    get commodity details
 1. GET- baseurl/commodities/{commodity_id}
 
     create commodity
